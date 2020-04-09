@@ -15,7 +15,7 @@ resource "okta_user_schema" "dob_extension" {
   master = "PROFILE_MASTER"
 }
 
-resource "okta_user_schema" "place of birth" {
+resource "okta_user_schema" "birth_extension" {
   index  = "place_of_birth"
   title  = "Place of Birth"
   type   = "string"
