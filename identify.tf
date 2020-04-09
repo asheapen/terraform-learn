@@ -14,3 +14,10 @@ resource "okta_user_schema" "dob_extension" {
   type   = "string"
   master = "PROFILE_MASTER"
 }
+
+resource "okta_user_schema" "place of birth" {
+  index  = "place_of_birth"
+  title  = "Place of Birth"
+  type   = "string"
+  master = "PROFILE_MASTER"
+}
