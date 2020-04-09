@@ -25,7 +25,7 @@ resource "okta_user_schema" "birth_extension" {
 resource "okta_user_schema" "crn_extension" {
   index  = "customer_reference_number"
   title  = "Customer Reference Number"
-  required = true
+  required = false
   type   = "string"
   master = "PROFILE_MASTER"
   depends_on = [okta_user_schema.dob_extension]
@@ -34,7 +34,7 @@ resource "okta_user_schema" "crn_extension" {
 resource "okta_user_schema" "internal_extension" {
   index  = "internal_reference_number"
   title  = "Internal Reference Number"
-  required = true
+  required = false
   type   = "string"
   master = "PROFILE_MASTER"
   depends_on = [okta_user_schema.dob_extension]
