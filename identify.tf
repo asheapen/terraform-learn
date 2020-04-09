@@ -30,3 +30,12 @@ resource "okta_user_schema" "crn_extension" {
   master = "PROFILE_MASTER"
   depends_on = [okta_user_schema.dob_extension]
 }
+
+resource "okta_user_schema" "internal_extension" {
+  index  = "internal_reference_number"
+  title  = "Internal Reference Number"
+  required = true
+  type   = "string"
+  master = "PROFILE_MASTER"
+  depends_on = [okta_user_schema.dob_extension]
+}
